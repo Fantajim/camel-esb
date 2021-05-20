@@ -35,7 +35,7 @@ public class CamelRoutes extends RouteBuilder {
 			.unmarshal(xmlDataFormat) //convert the representation of the object used in communication to the internal representation
 			.process(new CamelProcessor()) //transform the data from XML to JSON
 			.marshal(jsonDataFormat) //convert the internal representation of the object to the representation needed for communication
-			.to("jms:queue:digient"); //send data to the queue as a message
+			.to("jms:queue:esbLegacy"); //send data to the queue as a message
 	}
 
 }
